@@ -6,6 +6,7 @@ const estudianteRoutes    = require("./routes/estudiante");
 const estudianteSeqRoutes = require("./routes/estudianteSeq");
 const authRoutes          = require("./routes/auth");
 const verificarToken      = require("./middlewares/auth");
+const graphQLRoutes       = require("./routes/graphql");
 
 env.config();
 
@@ -18,12 +19,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Ruta pública para obtener el token
 app.use("/api/auth", authRoutes);
 
 app.use("/api/v1/estudiantes", verificarToken, estudianteRoutes);
 
 app.use("/api/v2/estudiantes", verificarToken, estudianteSeqRoutes);
+
+app.use("/api/v3/graphql", graphQLRoutes);
 
 sequelize
   .authenticate()

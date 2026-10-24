@@ -9,7 +9,6 @@ const idParamSchema = z.object({
 });
 
 // Cuerpo para crear / reemplazar (POST y PUT) un estudiante
-// z.object descarta campos no definidos (p. ej. estudiante_id) para que no se puedan sobrescribir
 const estudianteSchema = z.object({
     nombre: z
         .string({ error: (iss) => iss.input === undefined ? "El nombre es obligatorio" : "El nombre debe ser texto" })

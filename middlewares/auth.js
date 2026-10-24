@@ -9,7 +9,6 @@ const verificarToken = (req, res, next) => {
         return res.status(401).json({ error: "Token requerido" });
 
     try {
-        // Se fija el algoritmo para evitar ataques de tipo "alg: none"
         req.usuario = jwt.verify(token, process.env.JWT_SECRET, {
             algorithms: ["HS256"]
         });

@@ -1,0 +1,15 @@
+name: Insertar cursos
+request:
+  method: POST
+  url: http://localhost:4000/api/v3/graphql/courses
+  body:
+    json:
+      curso:
+        - organization_id: 10000000-0000-4000-8000-000000000001
+          course_type_id: 1
+          code: ROB-001
+          duration_hours: 20
+          certificate_enabled: true
+          status: DRAFT
+tests:
+  - status == 200
