@@ -1,0 +1,11 @@
+name: Actualiza cursos
+request:
+  method: PATCH
+  url: http://localhost:4000/api/v3/graphql/courses/ed5ad56f-1e49-4787-9d32-f0be981a3edf
+  body:
+    json:
+      code: ROB-002
+      duration_hours: 100
+      status: DRAFT
+tests:
+  - status == 200

@@ -1,0 +1,6 @@
+name: Prueba
+request:
+  method: GET
+  url: "{{baseUrl}}/"
+tests:
+  - status == 200

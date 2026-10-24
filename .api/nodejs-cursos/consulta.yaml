@@ -1,0 +1,6 @@
+name: Consulta
+request:
+  method: GET
+  url: http://localhost:4000/api/v3/graphql/ping
+tests:
+  - status == 200

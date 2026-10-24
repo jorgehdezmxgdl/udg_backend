@@ -1,0 +1,3 @@
+name: local
+variables:
+  baseUrl: http://localhost:3000
