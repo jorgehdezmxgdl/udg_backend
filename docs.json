@@ -1,0 +1,19 @@
+
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "Mi documentación",
+  "theme": "luma",
+  "colors": {
+    "primary": "#2563EB"
+  },
+  "navigation": {
+    "pages": [
+      {
+        "group": "Inicio",
+        "pages": [
+          "index"
+        ]
+      }
+    ]
+  }
+}
