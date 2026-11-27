@@ -1,0 +1,11 @@
+name: Enviar correo
+request:
+  method: POST
+  url: http://localhost:4000/api/v1/servicios/enviar_correo
+  body:
+    json:
+      para: fausto.hernandez@academicos.udg.mx
+      asunto: Prueba
+      mensaje: Hola, este correo de prueba....
+tests:
+  - status == 200
